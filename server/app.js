@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 require('./Database/connection')
-const port = 8080
+const port = process.env.PORT || 3000;
 const loginSchema = require('./Models/login')
 app.use(express.json())
 
@@ -23,6 +23,7 @@ const getUser = ()=>{
     app.get("/login",async (req,res)=>{
         try{
             const userData = await loginSchema.find({})
+            console.log(userData)
             res.send(userData)
             res.status(200)
         }
@@ -38,6 +39,7 @@ const deleteUser = ()=>{
 
 getUser()
 createUser()
-app.listen(port,()=>{
-    console.log("connection is setup at port :",port)
-})
+app.listen(port, "0.0.0.0", function () {
+    // ...
+    console.log("listening on the port" + port);
+});
