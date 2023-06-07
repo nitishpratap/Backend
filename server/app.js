@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 require('./Database/connection')
-const port = 8000
+const port = 8080
 const loginSchema = require('./Models/login')
 app.use(express.json())
 
