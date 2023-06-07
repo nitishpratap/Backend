@@ -1,0 +1,28 @@
+const mongoose =  require('mongoose')
+const mySchema = new mongoose.Schema({
+    name : {
+        type: String,
+        default: "Unknown"
+    },
+    total : {
+        type: Number,
+        required : true
+    }
+    ,
+    income :{
+        type: Number,
+        required : true
+    },
+    expense :{
+        type: Number,
+        required : true
+    },
+    date : {
+      type : String,
+      default : Date.now()
+    },
+    message : String
+})
+
+const userDetail =  new mongoose.model("userDetail",mySchema)
+module.exports = userDetail

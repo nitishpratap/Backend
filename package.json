@@ -1,0 +1,25 @@
+{
+  "name": "ebuy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitishpratap18/eBuy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitishpratap18/eBuy/issues"
+  },
+  "homepage": "https://github.com/nitishpratap18/eBuy#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "validator": "^13.7.0"
+  }
+}
