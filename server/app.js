@@ -6,7 +6,7 @@ const loginSchema = require('./Models/login')
 app.use(express.json())
 
 const createUser =  ()=>{
-    app.post('/user',async (req,res)=>{
+    app.post('https://backend-production-a13b.up.railway.app/user',async (req,res)=>{
         try{
             const user = new loginSchema(req.body)
             const createU = await user.save()
